@@ -51,13 +51,6 @@ public class AppController {
     }
 
 
-//    @GetMapping(value = "/getElevatorStatus", produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
-//    public Flux<List<ElevatorStatusModel>> streamJsonObjects() {
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-//        return Flux.interval(Duration.ofSeconds(1)).map(i -> appLoop.getStatuses());
-//    }
-
 @GetMapping("/getElevatorStatus")
 public ResponseEntity<List<ElevatorStatusModel>> getSystemStatus(){
     ObjectMapper objectMapper = new ObjectMapper();

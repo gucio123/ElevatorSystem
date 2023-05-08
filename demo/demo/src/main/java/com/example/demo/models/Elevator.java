@@ -14,7 +14,6 @@ public class Elevator extends Thread{
     private List<DestinationFloor> destinations;
     private ArrayList<Integer> stops;
     private ElevatorState elevatorState;
-    private boolean isMoving = false;
     public Elevator(int id) {
         this.id = id;
         this.currentFloor = 0;
@@ -45,7 +44,6 @@ public class Elevator extends Thread{
                     break;
             }
             if(this.elevatorState == ElevatorState.RIDING)
-            System.out.println("elevator " + id + " pietro" + currentFloor);
             Thread.sleep(1000);
         }
     }
@@ -63,7 +61,6 @@ public class Elevator extends Thread{
                         toList());
                 
                 destinationFloor = -1;
-                System.out.println("dojechala");
                 this.elevatorState = ElevatorState.WAITING_TO_PICK;
             }
         }

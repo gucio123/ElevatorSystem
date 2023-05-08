@@ -33,7 +33,6 @@ public class AppLoop extends Thread{
         ArrayList<ElevatorStatusModel> returnedList = new ArrayList<>();
         for (Elevator elevator : this.listOfElevators)
             returnedList.add(ElevatorToElevatorStatusConverter.convert(elevator));
-        System.out.println(returnedList);
         return returnedList;
     }
 
